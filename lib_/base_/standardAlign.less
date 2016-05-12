@@ -4,26 +4,29 @@
     align-items: center;
 }
 
-.verticalTop(@offset: 0){
-    margin-top: 0;
-    margin-bottom: auto;
+.inline-middle(){};
+.block-middle(){};
+
+.inline-bottom(){};
+.block-bottom(){};
+
+.inline-top(){};
+.block-top(){};
+
+.inline-center(){
+    text-align: center;
 }
 
-.verticalBottom(@offset: 0){
-    margin-top: auto;
-    margin-bottom: 0;
-}
-
-.horizontalCenter(@offset: 0){
+.block-center(){
     margin: 0 auto;
 }
 
-.horizontalLeft(@offset: 0){
-    margin-left: 0;
-    margin-right: auto;
+.block-align-children(){
+    display: flex;
+    justify-content: center;
 }
 
-.horizontalRight(@offset: 0){
-    margin-right: 0;
-    margin-left: auto;
-}
+.inline-left(){};
+.block-left(){};
+.inline-right(){};
+.block-right(){};
