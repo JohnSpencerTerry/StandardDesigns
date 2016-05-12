@@ -1,0 +1,56 @@
+@import 'normalizeDom.less';
+@import 'colors.less';
+
+@font-face {
+    font-family: "OpenSans";
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans:200,400,600');
+}
+
+.font(@fontWeight: 400; @size: 14px){
+    font-family: 'OpenSans', sans-serif;
+    font-weight: @fontWeight;
+    font-size: @size;
+    color: @black;
+    text-shadow: 0px 1px lighten(@matte-black, 25%);
+    line-height: 1;
+}
+
+.animateText(){
+    .font();
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        text-shadow: 1px 1px lighten(@matte-black, 15%);
+        cursor: pointer;
+    }
+    &:active{
+        text-shadow: 1px 1px lighten(@matte-black, 5%);
+        font-size: 16px;
+    }
+}
+
+.standard-font(){
+   .font();
+}
+
+.standard-material-font(){
+    .animateText();
+}
+
+.light-font(){
+    .font(200);
+}
+.bold-font() {
+    .font(600);
+}
+
+.large-font(){
+    .font(@size: 20px);
+}
+
+.italic-font(){
+    font-style: italic;
+}
+
+
+
+
