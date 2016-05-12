@@ -1,0 +1,44 @@
+@import 'standardBreaks.less';
+
+//takes guidance from google's material design for motions spec
+.transitionSpeed(@speed: 200ms, @delay: 0ms){
+    transition-duration: @speed;
+    transition-delay: @delay;
+}
+
+.standardTransition(){
+    @media @standardPhone, @smallTablet{
+        .transitionSpeed(375ms, 3ms);
+    }
+    @media @mediumTablet, @standardTablet{
+        .transitionSpeed(400ms, 5ms);
+    }
+    @media @mediumTablet, @standardTablet{
+        .transitionSpeed(250ms, 0ms);
+    }
+}
+
+.standardEnterScreen(){
+    @media @standardPhone, @smallTablet{
+        .transitionSpeed(225ms, 2ms);
+    }
+    @media @mediumTablet, @standardTablet{
+        .transitionSpeed(250ms, 3ms);
+    }
+    @media @mediumTablet, @standardTablet{
+        .transitionSpeed(190ms, 0ms);
+    }
+}
+
+.standardLeaveScreen(){
+    @media @standardPhone, @smallTablet{
+        .transitionSpeed(195ms, 2ms);
+    }
+    @media @mediumTablet, @standardTablet{
+        .transitionSpeed(210ms, 2ms);
+    }
+    @media @mediumTablet, @standardTablet{
+        .transitionSpeed(160ms, 0ms);
+    }
+}
+
