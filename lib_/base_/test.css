@@ -1,12 +1,6 @@
-.testVert {
-  height: 200;
-  width: 123.6;
-}
-.testHor {
-  height: 123.6;
-  width: 200;
-}
-.testBoth {
-  height: 50;
-  width: 50;
+.testClass {
+  background: linear-gradient(45deg, #54bd6d, #307b41);
+  height: 463.5px;
+  width: 750px;
+  margin: 0 auto;
 }
