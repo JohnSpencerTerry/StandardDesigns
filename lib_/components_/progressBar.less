@@ -1,5 +1,10 @@
+@import "..\base_\standardGradients.less";
+@import "..\base_\standardShapes.less";
+@import "..\base_\standardDepth.less";
+
 .progressBar {
-    width: 300px;
-    height: 10px;
-    border: 1px solid blue;
+    .addMaterialDepth();
+    .stripedGradient(@blue);
+    .sized-Rectangle(20px, 300px);
+    border-radius: 5px;
 }
