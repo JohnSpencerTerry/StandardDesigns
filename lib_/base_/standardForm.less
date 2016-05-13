@@ -1,13 +1,15 @@
 @import 'standardAlign.less';
-@import 'standardColors.less';
+@import 'standardGradients.less';
 @import 'standardShapes.less';
 @import 'standardDepth.less';
+@import 'standardColors.less';
 
 .standardForm(){
 
-    background-color: red;
+    
     & > input[type=text]{
-        color: blue;
+        display: inline-block;
+        width: 100%;
     }
     & > input[type=radio]{
         color: blue;
@@ -19,6 +21,9 @@
 
 
 .testFormClass{
-
+    .sized-Rectangle(500px, 300px);
+    .simpleGradient(@pink-grey);
+    .addMaterialDepth(@fast-transition);
+    .block-center();
     .standardForm();
 }

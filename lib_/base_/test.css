@@ -1,12 +1,21 @@
 .testFormClass {
+  height: 500px;
   width: 300px;
-  height: 400px;
-  padding: 5px;
-  border-radius: 5%;
-  background-color: red;
+  background: linear-gradient(45deg, #c8c1bf, #988b89);
+  border: 1px solid #757575;
+  box-shadow: 0 1px 3px #757575, 0 1px 2px #5b5b5b;
+  transition: all 0.1s ease-in-out;
+  margin: 0 auto;
+}
+.testFormClass:hover {
+  box-shadow: 0 7px 14px #4f4f4f, 0 3px 3px #424242;
+}
+.testFormClass:active {
+  box-shadow: 0 7px 14px #474747, 0 3px 3px #3a3a3a;
 }
 .testFormClass > input[type=text] {
-  color: blue;
+  display: inline-block;
+  width: 100%;
 }
 .testFormClass > input[type=radio] {
   color: blue;
