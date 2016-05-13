@@ -1,0 +1,27 @@
+.sized-Rectangle(@height: 0, @width:0) when(@width > 0) and (@height = 0) {
+    height: (@width * 0.618);
+    width: @width;
+}
+
+.sized-Rectangle(@height: 0, @width:0) when(@width = 0) and (@height > 0) {
+    height: @height;
+    width: (@height * 0.618);
+}
+
+
+.sized-Rectangle(@height: 0, @width:0) when(@width > 0) and (@height > 0) {
+    height: @height;
+    width: @width;
+}
+
+.testVert {
+    .sized-Rectangle(@height: 200);
+}
+
+.testHor {
+    .sized-Rectangle(@width: 200);
+}
+
+.testBoth {
+    .sized-Rectangle(50, 50);
+}

@@ -1,0 +1,12 @@
+.testVert {
+  height: 200;
+  width: 123.6;
+}
+.testHor {
+  height: 123.6;
+  width: 200;
+}
+.testBoth {
+  height: 50;
+  width: 50;
+}

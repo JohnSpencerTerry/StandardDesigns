@@ -17,14 +17,18 @@
     border-radius: 500px;
 }
 
-.vertical-Rectangle(@height: 100px){
-    height: @height; 
-    width: (@height * 0.618);;
-}
-
-.horizontal-Rectangle(@width: 100px){
+.sized-Rectangle(@height: 0, @width:0) when(@width > 0) and (@height = 0) {
     height: (@width * 0.618);
     width: @width;
 }
 
+.sized-Rectangle(@height: 0, @width:0) when(@width = 0) and (@height > 0) {
+    height: @height;
+    width: (@height * 0.618);
+}
 
+
+.sized-Rectangle(@height: 0, @width:0) when(@width > 0) and (@height > 0) {
+    height: @height;
+    width: @width;
+}
