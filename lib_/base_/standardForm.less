@@ -1,7 +1,10 @@
-
+@import 'standardAlign.less';
+@import 'standardColors.less';
+@import 'standardShapes.less';
+@import 'standardDepth.less';
 
 .standardForm(){
-    
+
     background-color: red;
     & > input[type=text]{
         color: blue;
@@ -10,11 +13,12 @@
         color: blue;
     }
     & > input[type=submit]{
-        background-color: 
+        background-color: red;
     }
 }
 
 
-.testClass{
+.testFormClass{
+
     .standardForm();
 }

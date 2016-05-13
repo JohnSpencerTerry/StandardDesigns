@@ -1,6 +1,16 @@
-.testClass {
+.testFormClass {
+  width: 300px;
+  height: 400px;
+  padding: 5px;
+  border-radius: 5%;
   background-color: red;
 }
-.testClass > input[type=text] {
+.testFormClass > input[type=text] {
   color: blue;
+}
+.testFormClass > input[type=radio] {
+  color: blue;
+}
+.testFormClass > input[type=submit] {
+  background-color: red;
 }
