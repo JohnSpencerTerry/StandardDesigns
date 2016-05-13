@@ -1,6 +1,31 @@
 //defines standard graidents
 
+@import "standardColors.less";
+
 .simpleGradient(@baseColor){
     background: linear-gradient(45deg, lighten(@baseColor, 10%), darken(@baseColor, 10%));
 }
 
+.stripedGradient(@baseColor, @secondaryColor: 0) when (iscolor(@secondaryColor)){
+    background: repeating-linear-gradient( 45deg,
+                @baseColor,
+                @baseColor 10px,
+                @secondaryColor 10px,
+                @secondaryColor 20px );
+   
+}
+
+.stripedGradient(@baseColor, @secondaryColor: 0) when not (iscolor(@secondaryColor)){
+    background: repeating-linear-gradient( 45deg,
+                @baseColor,
+                @baseColor 10px,
+                darken(@baseColor, 15%) 10px,
+                darken(@baseColor, 15%) 20px );
+   
+}
+
+.testClass{
+    width: 300px;
+    height: 300px;
+    .stripedGradient(@green);
+}

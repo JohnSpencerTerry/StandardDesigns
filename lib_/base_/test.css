@@ -1,0 +1,5 @@
+.testClass {
+  width: 300px;
+  height: 300px;
+  background: repeating-linear-gradient(45deg, #3EA055, #3EA055 10px, #296938 10px, #296938 20px);
+}
