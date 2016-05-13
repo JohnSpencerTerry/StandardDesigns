@@ -1,15 +1,6 @@
 //defines standard graidents
 
-@import 'standardColors.less';
-@import 'standardShapes.less';
-@import 'standardAlign.less';
-
 .simpleGradient(@baseColor){
     background: linear-gradient(45deg, lighten(@baseColor, 10%), darken(@baseColor, 10%));
 }
 
-.testClass {
-    .simpleGradient(@green);
-    .sized-Rectangle(@width: 750px);
-    .block-center();
-}
