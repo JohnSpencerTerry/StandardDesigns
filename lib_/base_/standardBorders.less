@@ -1,5 +1,17 @@
 // defines border templates 
 
-.solidBorder(@color, @thickness: 1){
-    border: 2px solid @color;
+@defaultBorderColor: #757575;
+
+.solidBorder(@color: @defaultBorderColor, @thickness: 1) when (ispixel(@thickness)){
+    border: @thickness solid @color;
+}
+
+.solidBorder(@color: @defaultBorderColor, @thickness: 1) when not (ispixel(@thickness)){
+    border: unit(@thickness, px) solid @color;
+}
+
+
+
+.testClass{
+    .solidBorder();
 }

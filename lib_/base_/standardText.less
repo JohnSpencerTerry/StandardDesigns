@@ -2,6 +2,8 @@
 
 @import 'standardColors.less';
 
+@defaultFontColor: #363636;
+
 @font-face {
     font-family: "OpenSans";
     src: url('https://fonts.googleapis.com/css?family=Open+Sans:200,400,600');
@@ -11,8 +13,8 @@
     font-family: 'OpenSans', sans-serif;
     font-weight: @fontWeight;
     font-size: @size;
-    color: @black;
-    text-shadow: 0px 1px lighten(@matte-black, 25%);
+    color: @defaultFontColor;
+    text-shadow: 0px 1px lighten(@defaultFontColor, 25%);
     line-height: 1;
 }
 
@@ -20,11 +22,11 @@
     .font();
     transition: all 0.2s ease-in-out;
     &:hover{
-        text-shadow: 1px 1px lighten(@matte-black, 15%);
+        text-shadow: 1px 1px lighten(@defaultFontColor, 15%);
         cursor: pointer;
     }
     &:active{
-        text-shadow: 1px 1px lighten(@matte-black, 5%);
+        text-shadow: 1px 1px lighten(@defaultFontColor, 5%);
         font-size: 16px;
     }
 }
