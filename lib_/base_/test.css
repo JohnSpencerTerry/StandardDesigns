@@ -1,0 +1,6 @@
+.testClass {
+  background-color: red;
+}
+.testClass > input[type=text] {
+  color: blue;
+}
