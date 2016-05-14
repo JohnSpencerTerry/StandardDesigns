@@ -17,17 +17,17 @@ or extending base modules requires minimal refractoring.
 Base modules are namespaced and follow the convention `#standard{module} > mixin()`. In this way, you may build the following
 component to create a progress bar:
 
-<code>
+```
     .myProgressBar {
         #standardDepth > .addMaterialDepth();
         #standardShapes > .sized-Rectangle(@height: 20px, @width: 500px);
         #standardGradients > .stripedGradient(@blue, @white);
     }
-</code>
+```
 
 This code compiled becomes 
 
-<code>
+```
     .myProgressBar {
         box-shadow: 0 1px 3px #757575, 0 1px 2px #5b5b5b;
         transition: all 0.2s ease-in-out;
@@ -45,7 +45,7 @@ This code compiled becomes
         box-shadow: 0 7px 14px #474747, 0 3px 3px #3a3a3a;
     }
 
-</code>
+```
 
 <img src="progressBar.PNG" />
 
