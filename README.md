@@ -13,6 +13,44 @@ All other files in base_ strive to do their respective tasks with minimal side e
 configurations as possible. Through modulating styles in this manner, we can achieve a more consistent visual and, replacing
 or extending base modules requires minimal refractoring.
 
+
+Base modules are namespaced and follow the convention `#standard{module} > mixin()`. In this way, you may build the following
+component to create a progress bar:
+
+<code>
+
+.myProgressBar {
+    #standardDepth > .addMaterialDepth();
+    #standardShapes > .sized-Rectangle(@height: 20px, @width: 500px);
+    #standardGradients > .stripedGradient(@blue, @white);
+}
+
+</code>
+
+This code compiled becomes 
+
+<code>
+    .myProgressBar {
+        box-shadow: 0 1px 3px #757575, 0 1px 2px #5b5b5b;
+        transition: all 0.2s ease-in-out;
+        height: 20px;
+        width: 500px;
+        border-radius: 0;
+        background: repeating-linear-gradient(45deg, #1C86EE, #1C86EE 10px, #FCFCFC 10px, #FCFCFC 20px);
+    }
+    
+    .myProgressBar:hover {
+        box-shadow: 0 7px 14px #4f4f4f, 0 3px 3px #424242;
+    }
+    
+    .myProgressBar:active {
+        box-shadow: 0 7px 14px #474747, 0 3px 3px #3a3a3a;
+    }
+
+</code>
+
+<img src="progressBar.PNG" />
+
 <h3>Components_</h3>
 
 These are components created from base modules and additional stylings which form final, or near final, widgets and components
