@@ -18,13 +18,11 @@ Base modules are namespaced and follow the convention `#standard{module} > mixin
 component to create a progress bar:
 
 <code>
-
-.myProgressBar {
-    #standardDepth > .addMaterialDepth();
-    #standardShapes > .sized-Rectangle(@height: 20px, @width: 500px);
-    #standardGradients > .stripedGradient(@blue, @white);
-}
-
+    .myProgressBar {
+        #standardDepth > .addMaterialDepth();
+        #standardShapes > .sized-Rectangle(@height: 20px, @width: 500px);
+        #standardGradients > .stripedGradient(@blue, @white);
+    }
 </code>
 
 This code compiled becomes 
