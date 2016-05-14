@@ -1,0 +1,26 @@
+//mixins to set standard alignment options
+
+#standardAlign {
+    
+    .verticalCenter(){
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .horizontalCenter(){
+        margin: 0 auto;
+    }
+
+    .verticalAndHorizontalCenter(){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .horizontalCenterText(){
+        text-align: center;
+    }
+
+}

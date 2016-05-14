@@ -1,0 +1,20 @@
+// creates material depth for Standard Design components
+
+@import "_colors.less";
+
+#standardDepth{
+
+    .addMaterialDepth() {
+        box-shadow: 0 1px 3px @defaultDepthColor, 0 1px 2px darken(@defaultDepthColor, 10%);
+        transition: all 0.2s ease-in-out;
+        
+        &:hover{
+            box-shadow: 0 7px 14px darken(@defaultDepthColor, 15%), 0 3px 3px darken(@defaultDepthColor, 20%);
+        }
+        
+        &:active{
+            box-shadow: 0 7px 14px darken(@defaultDepthColor, 18%), 0 3px 3px darken(@defaultDepthColor, 23%);
+        }
+     }
+
+}

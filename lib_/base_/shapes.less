@@ -1,0 +1,50 @@
+// these define the base shapes/border radius used to create Standard Design components
+#standardShapes {
+
+    .square(@heightOrWidth: 100px){
+        width: @heightOrWidth;
+        height: @heightOrWidth;
+    }
+
+    .circle(@heightOrWidth: 100px){
+        width: @heightOrWidth;
+        height: @heightOrWidth;
+        border-radius: 50%;
+    }
+
+    .pill(@height: 30px){
+        width: (@height * 2.6);
+        height: @height;
+        border-radius: 500px;
+    }
+
+    .sized-Rectangle(@height: 0; @width:0; @borderRadius: 0) when(@width > 0) and (@height = 0) {
+        height: (@width * 0.618);
+        width: @width;
+        border-radius: @borderRadius;
+    }
+
+    .sized-Rectangle(@height: 0; @width:0; @borderRadius: 0) when(@width = 0) and (@height > 0) {
+        height: @height;
+        width: (@height * 0.618);
+        border-radius: @borderRadius;
+    }
+
+
+    .sized-Rectangle(@height: 0; @width:0; @borderRadius: 0) when(@width > 0) and (@height > 0) {
+        height: @height;
+        width: @width;
+        border-radius: @borderRadius;
+    }
+
+    .sized-Pane(@height: 0; @width:0; @borderRadius: 0) when (@width > 0){
+        height: 100%;
+        width: @width;
+    }
+
+    .sized-Pane(@height: 0; @width:0; @borderRadius: 0) when (@height > 0){
+        height: 100%;
+        width: @width;
+    }
+
+}

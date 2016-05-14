@@ -1,0 +1,16 @@
+// mixins which define standard border templates
+
+@import '_colors.less';
+
+#standardBorders {
+
+    .solidBorder(@color: @defaultBorderColor, @thickness: 1) when (ispixel(@thickness)){
+        border: @thickness solid @color;
+    }
+
+    .solidBorder(@color: @defaultBorderColor, @thickness: 1) when not (ispixel(@thickness)){
+        border: unit(@thickness, px) solid @color;
+    }
+
+}
+

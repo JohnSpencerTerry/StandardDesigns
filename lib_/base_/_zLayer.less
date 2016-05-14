@@ -1,0 +1,6 @@
+//defines zLayer to add z-index 100, 200,...,900
+
+.zLayer(@layer: 1) when (round(@layer) > 0) and (round(@layer) < 10){
+    z-index: (@layer * 100);
+}
+
