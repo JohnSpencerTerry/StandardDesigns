@@ -1,0 +1,6 @@
+.testClass {
+  color: #3EA055;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
