@@ -24,10 +24,9 @@ function loadLibrary(){
         var filelist = filelist || [];
         var os = os || require("os");
             for(var i = 0, max = filelist.length; i < max; i++){
-                filelist[i] = "@import " + "'" + filelist[i] + "'" + ";" + os.EOL;
-                console.log(filelist[i]);
+                filelist[i] = "@import " + "'" + filelist[i] + "'" + ";";
             }
-            return filelist.join();
+            return filelist.join(os.EOL);
         };
     
     this.importedFiles = formatAsImportStatement(walkSync(rootDirectory, importedLessFiles));
