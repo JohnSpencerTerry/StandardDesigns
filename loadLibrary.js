@@ -1,30 +1,45 @@
-// kethinov/walksync.js
+// walksync method adapted from kethinov/walksync.js
 
-var walkSync = function(dir, filelist) {
-  var fs = fs || require('fs'),
-      files = fs.readdirSync(dir);
-  filelist = filelist || [];
-  files.forEach(function(file) {
-    if (fs.statSync(dir + file).isDirectory()) {
-      filelist = walkSync(dir + file + '/', filelist);
-    }
-    else {
-      filelist.push(file);
-    }
-  });
-  return filelist;
-};
+function loadLibrary(){
+  var rootDirectory = "./lib_/";
+  var importedLessFiles = [];
+  
+  var walkSync = function(dir, filelist) {
+        var fs = fs || require('fs');
+        var files = fs.readdirSync(dir);
+        var filelist = filelist || [];
+        files.forEach(function(file) {
+          if (fs.statSync(dir + file).isDirectory()) {
+            filelist = walkSync(dir + file + '/', filelist);
+          } else {
+            filelist.push(file);
+          }
+        
+         });
+        return filelist;
+     };
+     
+    
+    var formatAsImportStatement = function(filelist){
+        var filelist = filelist || [];
+        var os = os || require("os");
+            for(var i = 0, max = filelist.length; i < max; i++){
+                filelist[i] = "@import " + "'" + filelist[i] + "'" + ";" + os.EOL;
+                console.log(filelist[i]);
+            }
+            return filelist.join();
+        };
+    
+    this.importedFiles = formatAsImportStatement(walkSync(rootDirectory, importedLessFiles));
+}
 
-var formatAsImport = function(filelist){
-    filelist.forEach(function(file){
-        file = "@import " + file;
+loadLibrary.prototype.createLoaderFile = function(){
+    var fs = fs || require('fs');
+    fs.writeFile('autoload.less', this.importedFiles, 'utf8', function(){
+      console.log('autoloader file created');
     });
-    return filelist;
-};
+    
+}
 
-var importedLessFiles =[];
-var rootDirectory = "./lib_/";
-
-walkSync(rootDirectory, importedLessFiles);
-console.log(formatAsImport(importedLessFiles));
-console.log(importedLessFiles);
+var tester = new loadLibrary();
+tester.createLoaderFile();
