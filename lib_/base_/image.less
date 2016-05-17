@@ -1,15 +1,13 @@
 
 #standardImages {
     
-    .responsiveImage(){
+    .responsiveImage(@imgUrl){
         height: auto;
         max-width: 100%;
         display: inline-block;
+        background-image: url(@imgUrl);
     }
 
 
-    .shapedImage(){
-        .responsiveImage;
-    }
 
 }
