@@ -38,7 +38,7 @@ loadLibrary.prototype.createLoaderFile = function(){
       console.log('autoloader file created');
     });
     
-}
+};
 
 var tester = new loadLibrary();
 tester.createLoaderFile();
