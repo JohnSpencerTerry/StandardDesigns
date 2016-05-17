@@ -1,12 +1,8 @@
-@import 'materialDepth.less';
-@import 'colors.less';
-@import 'normalizeDom.less'; // removes defaults
-@import 'shapes.less';
 
 
-.badge {
+.badge() {
      background-color: @bright-green;  
-    .pill(45px);
-    .addMaterialDepth();
+    #standardShapes > .pill(45px);
+    #standardDepth > .addMaterialDepth();
 }
 

@@ -3,6 +3,36 @@ LESS components used to build quick, consistent web components.
 
 Currently, files are broken into two groups: base_ and components_
 
+<h3>Using autoload.less</h3>
+
+autoload.less contains a list of generated import statements so you will only need to use `@import "autoload.less";`
+
+If you make changes to `lib_`, run `node loadLibrary.js` in order to recompile the autoload.less file
+
+Without calling any modules (as demonstrated below), your generated css file `lessc myLessFile.less myCssFile.css` should look like:
+
+````css
+    html,body {
+        height: 100vh;
+    }
+    
+    *,*::before,*::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        z-index: 0;
+        border: none;
+        outline: none;
+        background: none;
+    }
+    
+    @font-face {
+        font-family: "OpenSans";
+        src: url('https://fonts.googleapis.com/css?family=Open+Sans:200,400,600');
+    }
+
+````
+
 <h3>Base_</h3>
 
 These are simple base modules from which components can be created. 

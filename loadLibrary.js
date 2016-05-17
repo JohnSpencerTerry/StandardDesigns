@@ -12,7 +12,7 @@ function loadLibrary(){
           if (fs.statSync(dir + file).isDirectory()) {
             filelist = walkSync(dir + file + '/', filelist);
           } else {
-            filelist.push(file);
+            filelist.push(dir+file);
           }
         
          });
