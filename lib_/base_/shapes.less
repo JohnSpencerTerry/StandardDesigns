@@ -12,11 +12,18 @@
         border-radius: 50%;
     }
 
-    .pill(@height: 30px; @width: (@height * 2.6)){
+   .pill(@height: 0; @width: 0) when (@height = 0) and (@width = 0){
+        border-radius: 500px;
+   
+    }
+
+    .pill(@height: 30px; @width: (@height * 2.6)) when (@height > 0){
         width: @width;
         height: @height;
         border-radius: 500px;
     }
+    
+
 
     .sized-Rectangle(@height: 0; @width:0; @borderRadius: 0) when(@width > 0) and (@height = 0) {
         height: (@width * 0.618);

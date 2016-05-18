@@ -24,25 +24,13 @@ body {
   box-shadow: 0 1px 3px #757575, 0 1px 2px #5b5b5b;
   transition: all 0.2s ease-in-out;
   background: linear-gradient(45deg, #4b9ff2, #0f6cc8);
-  width: 78px;
-  height: 30px;
   border-radius: 500px;
-  display: block;
-  zoom: 1;
 }
 .testBadge:hover {
   box-shadow: 0 7px 14px #4f4f4f, 0 3px 3px #424242;
 }
 .testBadge:active {
   box-shadow: 0 7px 14px #474747, 0 3px 3px #3a3a3a;
-}
-.testBadge:after {
-  content: " ";
-  display: block;
-  font-size: 0;
-  height: 0;
-  clear: both;
-  visibility: hidden;
 }
 .testBadge > span {
   font-family: 'OpenSans', sans-serif;
