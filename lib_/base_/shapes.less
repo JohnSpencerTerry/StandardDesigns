@@ -12,8 +12,8 @@
         border-radius: 50%;
     }
 
-    .pill(@height: 30px){
-        width: (@height * 2.6);
+    .pill(@height: 30px; @width: (@height * 2.6)){
+        width: @width;
         height: @height;
         border-radius: 500px;
     }

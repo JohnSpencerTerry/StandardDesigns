@@ -2,10 +2,26 @@
 #badgeComponent {
     
     .badge() {
+        #standardDepth > .addMaterialDepth();
+        #standardGradients > .simpleGradient(@baseColor: @blue);
+        #standardShapes > .pill();
+        .clearfix();
         
         
+        & > span {
+            #standardText > .animateText();
+            #standardShapes > .pill(@height: 30px, @width: 40px);
+            display: inline-block;
+            background-color: @mint-green;
+            line-height: 28px;
+        }
+        
+        & > div {
+            #standardImages > .responsiveImage('testIcon.png');
+            #standardAlign > .textRight();
+            #standardShapes > .circle(28px);
+        }
     }
 
 }
 
-//div > div
