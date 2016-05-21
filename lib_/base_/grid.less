@@ -1,6 +1,6 @@
 @numberOfColumns: 12;
 
-#standardGrid {
+
   .grid(@iterator: 1) when (@iterator =< @numberOfColumns) {
       .column-@{iterator} {
         width: (@iterator * 100% / @numberOfColumns);
@@ -12,4 +12,4 @@
       width: (@columnsTaken * 100% / @numberOfColumns);
   }
   
-}
+
