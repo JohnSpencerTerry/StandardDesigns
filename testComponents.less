@@ -1,9 +1,24 @@
 @import 'autoload.less';
 
+body {
+    background-color: @mint-green;
+}
 
 
-#info{
-    #standardGradients > .simpleGradient(@mint-green);
+#top-bar {
+    #standardGradients > .simpleGradient(@baseColor: #353F3E);
+    #standardBorders > .solidBorder();
+    #standardText > .animateText();
     #standardDepth > .addMaterialDepth();
-    #standardText > .font();   
+}
+
+#side-nav {
+    #standardGradients > .simpleGradient(@baseColor:#353F3E);
+    #standardBorders > .solidBorder();
+    #standardText > .animateText();
+    #standardDepth > .addMaterialDepth();
+}
+
+#mainView {
+    #standardGradients > .simpleGradient(@baseColor:#B4D7BF);
 }
